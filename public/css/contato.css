@@ -77,55 +77,9 @@ li a:hover {
     color: white;
 }
 
-
-/*
-header {
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 6.5vh;
-    box-shadow: .5px .5px .5px rgba(0, 0, 0, 0.041);
-}
-
-
-header a {
-    text-decoration: none;
-}
-
-header #logo {
-    margin-left: 20px;
-}
-
-header #title {
-    font-weight: 700;
-    font-size: 1.8rem;
-}
-
-header #btn-contact {
-    background-color: #F05540;
-    color: white;
-    width: 100px;
-    height: 35px;
-    margin-right: 20px;
-    border: none;
-    border-radius: .2rem; 1.5rem
-}
-
-header #btn-contact:hover {
-    background-color: rgb(231, 63, 41);
-}
-
-header #btn-contact:active {
-    background-color: #b84232;
-}
-
-*/
-
 section {
     width: 500px;
-    height: 300px;
+    height: 350px;
     padding: 10px;
     margin: 25vh auto;
     display: flex;
@@ -163,7 +117,7 @@ section input {
 section #btn-enviar {
     margin-top: 1.3rem;
     width: 10rem;
-    height: 2.8rem;
+    height: 4rem;
     border: none;
     background-color: #F05540;
     color: #FFFFFF;
@@ -176,14 +130,4 @@ section #btn-enviar:hover {
 
 section #btn-enviar:active {
     background-color: #b84232;
-}
-
-.div-label {
-    background-color: #F3F5F7;
-    border: none;
-    margin-top: .5rem;
-    width: 400px;
-    height: 2rem;
-    padding: 5px;
-    font-weight: bold;
 }

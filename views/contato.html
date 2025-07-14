@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBurguer</title>
+    <link rel="stylesheet" href="/css/contato.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><img src="/images/logoA.png" alt="Logo"></div>
+            <div class="logo-title"><a href="/">DevBurguer</a></div>
+            <ul>
+                <li><a href="/api/lanches">Cardápio</a></li>
+                <button type="submit"><a id="contact-text" href="/contato">Contato</a></button>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <h2 id="suggestion-title">Contato</h2>
+        <p id="suggestion-p">Entre em contato conosco.</p>
+        <form action="/contato" method="POST" class="contact-form">
+            <input name="nome" id="contact-name" type="text" placeholder="Nome" required>
+            <input name="email" ="contact-email" type="email" placeholder="E-mail" required>
+            <input name="assunto" ="contact-assunto" type="text" placeholder="Assunto" required>
+            <input name="mensagem" ="contact-mensagem" type="text" placeholder="Mensagem" required>
+            <button id="btn-enviar" type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+
+</html>

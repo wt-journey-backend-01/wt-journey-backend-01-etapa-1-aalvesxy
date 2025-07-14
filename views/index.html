@@ -1,65 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../public/css/style.css">
+    <title>DevBurguer</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="../public/images/logoA.png" alt="">
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><img src="/images/logoA.png" alt="Logo"></div>
+            <div class="logo-title"><a href="/">DevBurguer</a></div>
+            <ul>
+                <li><a href="/api/lanches">Cardápio</a></li>
+                <button type="submit"><a id="contact-text" href="/contato">Contato</a></button>
+            </ul>
         </div>
-        <div class="titulo">
-            <h1>DevBurguer</h1>
-        </div>
-        <div class="contato">
-            <button id="btn-contato">Contato</button>
-        </div>
-    </header>
-    <main>
-        <aside>
-            <section class="left">
-                <h2>Hamburguer</h2>
-                <ol class="hamburguer-list">
-                    <li class="hamburguer">
-                        <div>
-                            <img src="../public/images/burger.png" width="64px" alt="">
-                        </div>
-                        <div class="info">
-                            <span id="nome">Nome</span>
-                            <span id="ingredientes">Descrição</span>
-                        </div>
-                    </li>
-                    <li class="hamburguer">
-                        <div>
-                            <img src="../public/images/burger.png" width="64px" alt="">
-                        </div>
-                        <div class="info">
-                            <span id="nome">Nome</span>
-                            <span id="ingredientes">Descrição</span>
-                        </div>
-                    </li>
-                </ol>
-            </section>
-            <section class="right">
-                <div class="suggestion-box">
-                    <div class="text-area">
-                        <h3>Sugestão</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quasi, accusamus maiores </p>
-                    </div>
-                    <form action="/sugestao" method="GET">
-                        <input type="text" name="nome" id="nome_lanche" placeholder="Nome" required><br>
-                        <input type="text" nome="nome" id="ingredientes_lanche" placeholder="Ingredientes" required>
-                        <button type="submit" id="btn-enviar">Enviar</button>
-                    </form>
-                </div>
-            </section>
-        </aside>
-    </main>
+    </nav>
+    <section>
+        <h2 id="suggestion-title">Sugestão</h2>
+        <p id="suggestion-p">Nos dê uma sugestão de um hamburguer que você queira.</p>
+        <form action="/sugestao" method="GET" class="suggestion-form">
+            <input name="nome" id="suggestion-name" type="text" placeholder="Nome" required>
+            <input name="ingredientes" id="suggestion-ingredients" type="text" placeholder="Ingredientes" required>
+            <button id="btn-enviar" type="submit">Enviar</button>
+        </form>
+    </section>
 </body>
 
 </html>
