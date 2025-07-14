@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const lanches = require('./public/data/lanches.json');
 
 const app = express();
 const PORT = 3000;
@@ -22,6 +21,11 @@ app.use((req, res) => {
 });
 
 app.get('/api/lanches', (req, res) => {
+    const lanches = [
+        { id: 1, nome: 'Sanduíche', ingredientes: 'Pão, Carne, Queijo' },
+        { id: 2, nome: 'Salada', ingredientes: 'Alface, Tomate, Cenoura' },
+        { id: 3, nome: 'Suco', ingredientes: 'Laranja, Água' }
+    ];
     res.json(lanches);
 });
 
