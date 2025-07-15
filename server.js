@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/contato', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'contato.html'));
+    res.status(200).sendFile(path.join(__dirname, 'views', 'contato.html'));
 });
 
 app.use((req, res) => {
@@ -26,14 +26,14 @@ app.get('/api/lanches', (req, res) => {
         { id: 2, nome: 'Salada', ingredientes: 'Alface, Tomate, Cenoura' },
         { id: 3, nome: 'Suco', ingredientes: 'Laranja, Água' }
     ];
-    res.json(lanches);
+    res.status(200).set('Content-Type', 'application/json').json(lanches);
 });
 
 app.get('/sugestao', (req, res) => {
     const nomeLanche = req.query.nome;
     const ingredientesLanche = req.query.ingredientes;
 
-    res.send(`
+    res.status(200).send(`
         <html lang="pt-br">
 
             <head>
@@ -69,7 +69,7 @@ app.get('/sugestao', (req, res) => {
 app.post('/contato', (req, res) => {
     const { nome, email, assunto, mensagem } = req.body;
 
-    res.send(`
+    res.status(200).type('html').send(`
        <html lang="pt-br">
 
             <head>
