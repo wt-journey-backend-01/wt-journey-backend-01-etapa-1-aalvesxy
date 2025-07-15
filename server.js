@@ -8,6 +8,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+const lanches = [
+    { id: 1, nome: 'Sanduíche', ingredientes: 'Pão, Carne, Queijo' },
+    { id: 2, nome: 'Salada', ingredientes: 'Alface, Tomate, Cenoura' },
+    { id: 3, nome: 'Suco', ingredientes: 'Laranja, Água' }
+];
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
@@ -17,19 +23,14 @@ app.get('/contato', (req, res) => {
 });
 
 app.get('/api/lanches', (req, res) => {
-    const lanches = [
-        { id: 1, nome: 'Sanduíche', ingredientes: 'Pão, Carne, Queijo' },
-        { id: 2, nome: 'Salada', ingredientes: 'Alface, Tomate, Cenoura' },
-        { id: 3, nome: 'Suco', ingredientes: 'Laranja, Água' }
-    ];
-    res.status(200).set('Content-Type', 'application/json').json(lanches);
+    res.json(lanches);
 });
 
 app.get('/sugestao', (req, res) => {
     const nomeLanche = req.query.nome;
     const ingredientesLanche = req.query.ingredientes;
 
-    res.status(200).send(`
+    res.status(200).type('html').send(`
         <html lang="pt-br">
 
             <head>
