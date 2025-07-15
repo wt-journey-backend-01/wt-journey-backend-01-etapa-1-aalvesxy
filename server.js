@@ -16,10 +16,6 @@ app.get('/contato', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, 'views', 'contato.html'));
 });
 
-app.use((req, res) => {
-    res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
-});
-
 app.get('/api/lanches', (req, res) => {
     const lanches = [
         { id: 1, nome: 'Sanduíche', ingredientes: 'Pão, Carne, Queijo' },
@@ -102,6 +98,10 @@ app.post('/contato', (req, res) => {
 
         </html> 
     `);
+});
+
+app.use((req, res) => {
+    res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
 
 app.listen(PORT, () => {
